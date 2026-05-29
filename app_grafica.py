@@ -34,7 +34,7 @@ class App(ctk.CTk):
                                           fg_color="transparent", border_width=2)
         self.btn_descifrar.pack(pady=10, padx=50, fill="x")
 
-        # Barra de Progreso (Invisible al inicio)
+        # Barra de Progreso
         self.progress_bar = ctk.CTkProgressBar(self.main_frame, width=300)
         self.progress_bar.set(0)
         self.progress_bar.pack(pady=20)
@@ -65,7 +65,7 @@ class App(ctk.CTk):
         try:
             self.status_label.configure(text=f"Procesando archivo...", text_color="yellow")
             
-            # Simulamos progreso visual (esto se ve genial en videos)
+            # Simulamos progreso visual
             for i in range(1, 11):
                 time.sleep(0.1) # Simula carga
                 self.progress_bar.set(i / 10)
